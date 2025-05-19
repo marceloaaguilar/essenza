@@ -10,10 +10,33 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
       body {
-        font-family: "Merriweather", serif;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        color: #000;
+      }
+
+      .titulo-cursivo {
+        font-family: "Ephesis", cursive;
+        font-size: 2rem;
+        font-style: italic;
+        line-height: 2.5rem;
+      }
+
+      .dourado {
+        background: linear-gradient(45deg, #bfa046, #ffd700, #bfa046);
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+      }
+
+      /* Opcional: para aplicar o dourado como fundo de botão ou div */
+      .bg-dourado {
+        background: linear-gradient(45deg, #bfa046, #ffd700, #bfa046);
+        color: #fff;
+        border: none;
       }
 
       .navbar {
@@ -28,7 +51,7 @@
       }
 
       .nav-link {
-        color: black !important;
+        color: white !important;
         font-weight: 600;
         margin-left: 20px;
         text-transform: uppercase;
@@ -51,7 +74,7 @@
       .hero h1 {
         font-weight: 700;
         font-size: 48px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
       }
 
       .hero p {
@@ -99,22 +122,22 @@
       }
 
       .btn-gold {
-        background-color: #c8a241;
-        color: #fff;
+        background: linear-gradient(45deg, #bfa046, #ffd700, #bfa046);
+        color: black;
         font-weight: 600;
         border: none;
         padding: 12px 30px;
         font-size: 18px;
-        border-radius: 8px;
+        border-radius: 4px;
+        transition: background 0.3s ease, color 0.3s ease;
       }
 
       .btn-gold:hover {
-        background-color: #b89030;
+        background: linear-gradient(45deg, #b89030, #ffcc00, #b89030);
+        color: black;
       }
 
       footer {
-        background-color: #ffffff;
-        color: #c8a241;
         padding: 20px 0;
         text-align: center;
         border-top: 1px solid #eee;
@@ -213,14 +236,17 @@
       }
 
       .btn-produto {
-        background-color: #c8a241;
-        color: white;
+        background: linear-gradient(45deg, #bfa046, #ffd700, #bfa046);;
+        color: black;
+        font-weight: 500;
+        text-transform: uppercase;
         border: none;
         transition: background-color 0.3s ease;
       }
 
       .btn-produto:hover {
-        background-color: #b8932d;
+        background-color: linear-gradient(45deg, #b89030, #ffcc00, #b89030);
+        color: black;
       }
 
       @media (min-width: 992px) {
@@ -241,6 +267,16 @@
           justify-content: center;
           align-items: center;
         }
+
+        .titulo-cursivo {
+          font-size: 3rem !important;
+          line-height: 2.5rem;
+        }
+
+        .doctor-name {
+          font-size: 1.5rem !important;
+        }
+
       }
 
       .whatsapp-float {
@@ -267,7 +303,15 @@
         text-decoration: none;
         color: white;
       }
-      
+
+      .icone-gradiente {
+        background: linear-gradient(45deg, #bfa046, #ffd700, #bfa046);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+
+
     </style>
   </head>
 
@@ -277,7 +321,7 @@
       <i class="bi bi-whatsapp"></i>
     </a>
 
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">Essenza Rafinnato</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -320,8 +364,8 @@
         class="container position-relative z-2 text-center d-flex flex-column justify-content-center align-items-center"
         style="min-height: 90vh"
       >
-        <h1 class="display-4 fw-bold fade-in">Instituto Essenza Rafinnato</h1>
-        <p class="lead fade-in delay-1">Desenvolvendo líderes para transformar o mundo</p>
+        <h1 class="display-4 fw-bold fade-in" >Instituto Essenza Rafinnato</h1>
+        <p class="lead fade-in delay-1 titulo-cursivo" style="font-size: 3.5rem;">Reprogramando mentes</p>
         <a
           href="https://api.whatsapp.com/send?phone=21966697276"
           target="_blank"
@@ -345,27 +389,83 @@
           </div>
 
           <div class="col-12 col-md-6 fade-in delay-2">
-            <h2>Transformando Vidas, Moldando Líderes</h2>
-            <p>Bem-vindo ao Instituto Essenza Rafinnato, onde sua jornada para liderar com propósito começa.</p>
+            <h2 class="titulo-cursivo fs-1">Reprograme sua Mente, Transforme sua Vida</h2>
+
+            <p>Se você sente que está preso em padrões que se repetem, chegou a hora de mudar. No Instituto Essenza Rafinnato, ajudamos você a reescrever sua história.</p>
+            
             <p>
-              Aqui trabalhamos na Educação e Saúde, onde a excelência na formação de profissionais de saúde mental
-              encontra sede. Em um mundo em constante mudança, o nosso compromisso é capacitar líderes, terapeutas e
-              psicanalistas com as ferramentas necessárias para promover a saúde mental e o bem-estar, não apenas em
-              suas práticas, mas em suas vidas.
+              Atuamos com um método único e eficaz, baseado na neuroplasticidade — a incrível capacidade do cérebro de se reorganizar e criar novos caminhos. Através de protocolos personalizados, promovemos a reprogramação mental e o rompimento de bloqueios emocionais e comportamentais que impedem seu progresso.
             </p>
-            <a href="#contato" class="btn btn-gold mt-4">Fale Conosco</a>
+
+            <p>
+              Nossos programas incluem acompanhamento psiquiátrico especializado, terapias individuais e em grupo, hipnoterapia, entre outras abordagens terapêuticas integradas. Tudo isso com um só objetivo: mudar sua vida de verdade.
+            </p>
+
+            <p>
+              Chega de viver no piloto automático. Dê o primeiro passo rumo à liberdade emocional, ao equilíbrio e a uma nova versão de si mesmo(a).
+            </p>
+
+            <a href="#contato" class="btn btn-gold mt-4">Quero reprogramar minha mente</a>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark text-white" style="padding: 60px 0;">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2 class="mb-3 titulo-cursivo" style="font-size: 4rem;">Nossas Especialistas</h2>
+            <p class="lead">Duas líderes apaixonadas pela transformação da saúde mental</p>
+          </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+          <div class="col-md-4 text-center">
+            <img src="/mnt/data/b917838a-e162-4392-9d48-c116ca37dbf5.png" alt="Dra. Veridiana Bronzon" class="img-fluid rounded shadow" style="max-height: 350px; object-fit: cover;">
+          </div>
+          <div class="col-md-8">
+            <span class="doctor-name" style="background: linear-gradient(45deg, #b89030, #ffcc00, #b89030); font-size: 2rem; font-weight: 700; padding: 0rem 1rem;">Dra. Veridiana Bronzon</span>
+            <p>
+              Médica especialista em <strong>neuroplasticidade cerebral</strong> e <strong>hipnoterapia</strong>, com pós-graduação em Psiquiatria e Neurologia Clínica.
+              Terapeuta e membro do Conselho Brasileiro de Psicanálise, dedica-se ao estudo e aprimoramento da saúde mental.
+              Autora do livro <em>Quebra de Padrões</em>, é fundadora e CEO do Instituto Essenza Raffinato.
+            </p>
+            <p>
+              Lidera um centro médico e acadêmico voltado à <strong>reprogramação mental</strong> e ao bem-estar emocional, oferecendo capacitações, terapias e workshops
+              para profissionais e pacientes.
+            </p>
+          </div>
+        </div>
+
+        <div class="row align-items-center flex-md-row-reverse">
+          <div class="col-md-4 text-center">
+            <img src="/mnt/data/b917838a-e162-4392-9d48-c116ca37dbf5.png" alt="Dra. Vanessa Dizul" class="img-fluid rounded shadow" style="max-height: 350px; object-fit: cover;">
+          </div>
+          <div class="col-md-8">
+            <span class="doctor-name" style="background: linear-gradient(45deg, #b89030, #ffcc00, #b89030); font-size: 2rem; font-weight: 700; padding: 0rem 1rem;">Dra. Vanessa Dizul</span>
+            <p>
+              Neurocientista, terapeuta comportamental, psicanalista, graduanda em Medicina e advogada. Com uma trajetória multidisciplinar,
+              dedica-se ao estudo da mente humana e ao desenvolvimento do bem-estar emocional.
+            </p>
+            <p>
+              Co-fundadora do Instituto Essenza Raffinato, atua na <strong>capacitação de profissionais</strong> e promoção da saúde mental. 
+              Autora do livro <em>Pílulas de Autoestima</em>, compartilha conhecimento sobre <strong>autoconhecimento e transformação pessoal</strong>.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-5 bg-light" id="produtos">
+    <section  style="padding-bottom: 5rem; padding-top: 6rem;" class="bg-light" id="produtos">
       <div class="container text-center">
-        <h2 class="mb-5">Nossos Produtos</h2>
+        <h2 class="mb-5 titulo-cursivo" style="font-size: 4rem;">Nossos Produtos</h2>
         <div class="row justify-content-center gx-4 gy-4">
           <div class="col-12 col-sm-6 col-md-4 col-lg px-md-2 px-5">
             <div class="p-4 p-md-5 bg-white rounded shadow-sm h-100 transition-hover">
-              <i class="bi bi-journal-richtext fs-1 mb-3" style="color: #c8a241"></i>
+              <i class="bi bi-journal-richtext fs-1 mb-3 icone-gradiente"></i>
               <h2 class="fs-5 mb-2">Livros</h2>
               <p class="small text-muted">Obras essenciais para o desenvolvimento pessoal e profissional.</p>
               <a
@@ -380,7 +480,7 @@
 
           <div class="col-12 col-sm-6 col-md-4 col-lg px-md-2 px-5">
             <div class="p-4 p-md-5 bg-white rounded shadow-sm h-100 transition-hover">
-              <i class="bi bi-file-earmark-text fs-1 mb-3" style="color: #c8a241"></i>
+              <i class="bi bi-file-earmark-text fs-1 mb-3 icone-gradiente" ></i>
               <h2 class="fs-5 mb-2">Protocolos</h2>
               <p class="small text-muted">Modelos de atendimento e guias terapêuticos para aplicação prática.</p>
               <a href="#" class="btn btn-sm btn-produto">Ver mais</a>
@@ -389,7 +489,7 @@
 
           <div class="col-12 col-sm-6 col-md-4 col-lg px-md-2 px-5">
             <div class="p-4 p-md-5 bg-white rounded shadow-sm h-100 transition-hover">
-              <i class="bi bi-book fs-1 mb-3" style="color: #c8a241"></i>
+              <i class="bi bi-book fs-1 mb-3 icone-gradiente"></i>
               <h2 class="fs-5 mb-2">Ebooks</h2>
               <p class="small text-muted">Conteúdo digital acessível com temas de liderança e saúde mental.</p>
               <a
@@ -404,7 +504,7 @@
 
           <div class="col-12 col-sm-6 col-md-4 col-lg px-md-2 px-5">
             <div class="p-4 p-md-5 bg-white rounded shadow-sm h-100 transition-hover">
-              <i class="bi bi-people fs-1 mb-3" style="color: #c8a241"></i>
+              <i class="bi bi-people fs-1 mb-3 icone-gradiente"></i>
               <h2 class="fs-5 mb-2">Terapia em Grupo</h2>
               <p class="small text-muted">Experiências coletivas de escuta, acolhimento e transformação.</p>
               <a href="#" class="btn btn-sm btn-produto">Ver mais</a>
@@ -413,7 +513,7 @@
 
           <div class="col-12 col-sm-6 col-md-4 col-lg px-md-2 px-5">
             <div class="p-4 p-md-5 bg-white rounded shadow-sm h-100 transition-hover">
-              <i class="bi bi-easel fs-1 mb-3" style="color: #c8a241"></i>
+              <i class="bi bi-easel fs-1 mb-3 icone-gradiente"></i>
               <h2 class="fs-5 mb-2">Workshops</h2>
               <p class="small text-muted">Capacitações intensivas para ampliar suas habilidades.</p>
               <a href="#" class="btn btn-sm btn-produto">Ver mais</a>
@@ -423,11 +523,11 @@
       </div>
     </section>
 
-    <section id="feedbacks" class="py-5" style="background-color: #eeeeee">
+    <section id="feedbacks" class="py-5 bg-dark">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 mb-4 mb-md-0">
-            <h2 class="text-uppercase fw-bold mb-3">O QUE DIZEM NOSSOS CLIENTES</h2>
+            <h2 class="mb-3 titulo-cursivo" style="font-size: 3.5rem; color: #C0C0C0">Feedbacks dos nossos clientes</h2>
             <hr class="mb-4" style="width: 100px; border-top: 3px solid #c8a241" />
 
             <div id="carouselFeedback" class="carousel slide" data-bs-ride="carousel">
@@ -536,7 +636,7 @@
 
     <section id="youtube" class="py-5" style="background-color: #f9f9f9">
       <div class="container text-center">
-        <h2 class="fw-bold mb-3" style="color: #1a2e4f">Nosso Canal no YouTube</h2>
+        <h2 class="mb-3 titulo-cursivo" style="color: #1a2e4f; font-size: 3.5rem;">Nosso Canal no YouTube</h2>
 
         <p class="text-muted mb-4">
           Acompanhe nossos vídeos, palestras e entrevistas exclusivas com grandes líderes do Brasil.
@@ -558,12 +658,11 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 mb-4 mb-md-0">
-            <h6 class="text-uppercase fw-bold" style="color: #1a2e4f">Faça parte da</h6>
-            <h2 class="fw-bold" style="color: #1a2e4f">
-              PRÓXIMA
-              <br />
+            <h6 class="fw-bold" style="color: #1a2e4f">Faça parte da</h6>
+            <h2 style="color: #1a2e4f; line-height: 2rem;">
+              PRÓXIMA<br />
               GERAÇÃO DE
-              <span style="color: #c8a241">LÍDERES</span>
+              <span class="titulo-cursivo" style="color: #c8a241; font-size: 4rem;">líderes</span>
             </h2>
             <hr style="width: 100px; border-top: 3px solid #c8a241" />
             <p class="text-muted mt-3">
@@ -594,6 +693,24 @@
                   <input type="email" class="form-control" placeholder="Digite seu e-mail*" required />
                 </div>
 
+                <div class="mb-3">
+                  <select class="form-select" required>
+                    <option value="" disabled selected>Sou...</option>
+                    <option>Profissional da saúde</option>
+                    <option>Paciente</option>
+                    <option>Outro</option>
+                  </select>
+                </div>
+
+                <div class="mb-4">
+                  <select class="form-select" required>
+                    <option value="" disabled selected>Tenho interesse em...</option>
+                    <option>Cursos</option>
+                    <option>Atendimento em depressão e ansiedade</option>
+                    <option>Outro</option>
+                  </select>
+                </div>
+
                 <button
                   type="submit"
                   class="btn w-100"
@@ -612,7 +729,8 @@
       </div>
     </section>
 
-    <footer class="text-white py-5" style="background-color: #c8a241">
+
+    <footer class="text-black py-5" style="background: linear-gradient(45deg, #bfa046, #ffd700, #bfa046);">
       <div class="container">
         <div class="row gy-4">
           <div class="col-md-4 text-center text-md-start">
@@ -627,7 +745,7 @@
               <a
                 href="https://www.instagram.com/inst.essenzaraffinato/"
                 target="_blank"
-                class="text-white"
+                class="text-black"
                 style="transition: color 0.3s"
               >
                 <i class="bi bi-instagram fs-5"></i>
@@ -635,7 +753,7 @@
               <a
                 href="https://www.youtube.com/@essenzainstituto"
                 target="_blank"
-                class="text-white"
+                class="text-black"
                 style="transition: color 0.3s"
               >
                 <i class="bi bi-youtube fs-5"></i>
@@ -643,7 +761,7 @@
               <a
                 href="https://www.tiktok.com/@inst.essenzaraffinato"
                 target="_blank"
-                class="text-white"
+                class="text-black"
                 style="transition: color 0.3s"
               >
                 <i class="bi bi-tiktok fs-5"></i>
@@ -654,12 +772,12 @@
           <div class="col-md-4 text-center text-md-start">
             <h5 class="text-uppercase fw-bold mb-3">Links Importantes</h5>
             <ul class="list-unstyled small">
-              <li><a href="#inicio" class="text-white text-decoration-none d-block mb-1">Início</a></li>
-              <li><a href="#sobre" class="text-white text-decoration-none d-block mb-1">Sobre</a></li>
-              <li><a href="#produtos" class="text-white text-decoration-none d-block mb-1">Produtos</a></li>
-              <li><a href="#youtube" class="text-white text-decoration-none d-block mb-1">Youtube</a></li>
-              <li><a href="#artigos" class="text-white text-decoration-none d-block mb-1">Artigos</a></li>
-              <li><a href="#contato" class="text-white text-decoration-none d-block">Contato</a></li>
+              <li><a href="#inicio" class="text-black text-decoration-none d-block mb-1">Início</a></li>
+              <li><a href="#sobre" class="text-black text-decoration-none d-block mb-1">Sobre</a></li>
+              <li><a href="#produtos" class="text-black text-decoration-none d-block mb-1">Produtos</a></li>
+              <li><a href="#youtube" class="text-black text-decoration-none d-block mb-1">Youtube</a></li>
+              <li><a href="#artigos" class="text-black text-decoration-none d-block mb-1">Artigos</a></li>
+              <li><a href="#contato" class="text-black text-decoration-none d-block">Contato</a></li>
             </ul>
           </div>
 
@@ -669,7 +787,8 @@
             <a
               href="https://api.whatsapp.com/send?phone=21966697276"
               target="_blank"
-              class="btn btn-light text-dark fw-bold"
+              class="btn text-dark fw-bold"
+              style="background-color: #C0C0C0;"
             >
               <i class="bi bi-whatsapp me-2"></i>
               Fale pelo WhatsApp
