@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Instituto Essenza Rafinnato - E-books</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      @font-face{
+        font-family: "Athene";
+        src: url('fonts/Athene\ Voyage.ttf') format('truetype');
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        color: #000;
+      }
+
+      .titulo-cursivo {
+        font-family: "Athene";
+        font-size: 2rem;
+        font-style: italic;
+        line-height: 2.5rem;
+      }
+
+      .dourado {
+        background: #c8a241;
+      }
+
+      .bg-dourado {
+        background: #c8a241;
+      }
+
+      .hero {
+        background: linear-gradient(rgba(200, 162, 65, 0.6), rgba(200, 162, 65, 0.6)),
+          url("https://img.freepik.com/fotos-gratis/empresarios-sorridentes-em-uma-reuniao-de-negocios_53876-101918.jpg")
+            no-repeat center center;
+        background-size: cover;
+        color: #fff;
+        padding: 140px 20px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-weight: 700;
+        font-size: 48px;
+        margin-bottom: 0px;
+      }
+
+      .hero p {
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+
+      .section-content {
+        padding: 80px 20px;
+      }
+
+      .section-content h2 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        color: #c8a241;
+        text-align: center;
+      }
+
+      .section-content p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #666;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .youtube-section {
+        background-color: #f9f9f9;
+        padding: 80px 20px;
+      }
+
+      .youtube-section h2 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        color: #c8a241;
+        text-align: center;
+      }
+
+      .youtube-video {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn-gold {
+        background: #c8a241;
+        color: white;
+        font-weight: 600;
+        border: none;
+        padding: 12px 30px;
+        font-size: 18px;
+        border-radius: 4px;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+
+      .btn-gold:hover {
+        background: #c8a241;
+        color: white;
+      }
+
+      footer {
+        padding: 20px 0;
+        text-align: center;
+        border-top: 1px solid #eee;
+        margin-top: 60px;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+        z-index: 1;
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+      }
+
+      .delay-1 {
+        animation-delay: 0.5s;
+      }
+
+      .delay-2 {
+        animation-delay: 1s;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .about-section {
+        background-color: #f8f9fa;
+        padding: 80px 0;
+      }
+
+      .about-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .about-image {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .about-image:hover img {
+        transform: scale(1.1);
+      }
+
+      .about-text {
+        flex: 1;
+        text-align: left;
+        max-width: 600px;
+      }
+
+      .about-text h2 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .about-text p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #6c757d;
+      }
+
+      .transition-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .transition-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-produto {
+        background: #c8a241;
+        color: white;
+        font-weight: 500;
+        text-transform: uppercase;
+        border: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-produto:hover {
+        background-color: #c8a241;
+        color: white;
+      }
+
+      @media (max-width: 576px) {
+        #inicio {
+          max-height: 100vh;
+          overflow-y: auto;
+        }
+
+        #inicio .container {
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .titulo-cursivo {
+          font-size: 2rem !important;
+          line-height: 2.5rem;
+        }
+
+        .doctor-name {
+          font-size: 1.5rem !important;
+        }
+
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: #c8a241;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-float:hover {
+        background-color: #c8a241;
+        color: #fff;
+        transform: scale(1.1);
+      }
+
+      .icone-gradiente {
+        background: #c8a241;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+       @media (max-width: 767.98px) {
+        .slide-left-mobile {
+          object-position: 25% center !important;
+      } 
+  }
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    <a href="https://wa.me/5521966697276" class="whatsapp-float" target="_blank" aria-label="Conversar no WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <custom-navbar></custom-navbar>
+
+    <section class="position-relative vh-100">
+      <img src="images/telemedicinaSocial/medica.jpg" class="w-100 h-100 object-fit-cover" alt="Imagem de fundo">
+
+      <div class="position-absolute top-0 start-0 w-100 h-100" 
+          style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.1));">
+      </div>
+
+      <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+        <h1 class="fw-bold display-4">Telemedicina Social Online</h1>
+        <p class="lead mt-3">Atendimento prático e humanizado com a Dra. Veridiana Bronzón</p>
+        <a href="https://api.whatsapp.com/send?phone=21966697276" target="_blank" class="btn btn-gold mt-4 fade-in delay-2">
+          Faça seu Agendamento
+        </a>
+      </div>
+    </section>
+
+    <section class="bg-light py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h2 class="titulo-cursivo mb-4" style="font-size: 3.5rem; font-weight: 700; line-height: 60px; color: #333;">
+              Um Atendimento Online Acessível
+            </h2>
+
+            <ul class="text-start mx-auto" 
+                style="list-style: none; padding-left: 0; margin-top: 2.5rem; max-width: 650px; color: #666; font-size: 1rem; line-height: 1.6;">
+              
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; top: 0.35rem; width: 10px; height: 10px; border-radius: 50%; background: #c8a241;"></span>
+                Oferecido pela <strong>Dra. Veridiana Bronzón</strong>.
+              </li>
+
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; top: 0.35rem; width: 10px; height: 10px; border-radius: 50%; background: #c8a241;"></span>
+                Atendimento rápido, acessível e com acolhimento emocional à distância.
+              </li>
+
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; top: 0.35rem; width: 10px; height: 10px; border-radius: 50%; background: #c8a241;"></span>
+                Consultas online de <strong>15 a 20 minutos</strong>.
+              </li>
+
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; top: 0.35rem; width: 10px; height: 10px; border-radius: 50%; background: #c8a241;"></span>
+                Funcionamento por <strong>ordem de fila de espera</strong>.
+              </li>
+
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; top: 0.35rem; width: 10px; height: 10px; border-radius: 50%; background: #c8a241;"></span>
+                <span class="text-danger fw-bold">Não emite laudos</span> nem preenche formulários como o FREMEC.
+              </li>
+
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; top: 0.35rem; width: 10px; height: 10px; border-radius: 50%; background: #c8a241;"></span>
+                Indicado para quem já passou por atendimento presencial ou precisa de <strong>renovação de receitas, solicitação ou checagem de exames</strong>.
+              </li>
+            </ul>
+
+            <a href="#contato" 
+              class="btn btn-produto mt-4" 
+              style="background: #c8a241; border: none; color: white; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; transition: filter 0.3s ease;">
+              Clique aqui e garanta sua vaga na fila de espera
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-white py-5 bg-dark">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-4 text-center text-md-start">
+            <img
+              src="images/logo.png"
+              alt="Logo Essenza Rafinnato"
+              class="mb-3"
+              style="max-width: 180px"
+            />
+            <p class="small">Desenvolvendo líderes para transformar o mundo.</p>
+            <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-3">
+              <a
+                href="https://www.instagram.com/inst.essenzaraffinato/"
+                target="_blank"
+                class="text-white"
+                style="transition: color 0.3s"
+              >
+                <i class="bi bi-instagram fs-5"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@essenzainstituto"
+                target="_blank"
+                class="text-white"
+                style="transition: color 0.3s"
+              >
+                <i class="bi bi-youtube fs-5"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@inst.essenzaraffinato"
+                target="_blank"
+                class="text-white"
+                style="transition: color 0.3s"
+              >
+                <i class="bi bi-tiktok fs-5"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center text-md-start">
+            <h5 class="text-uppercase fw-bold mb-3">Links Importantes</h5>
+            <ul class="list-unstyled small">
+              <li><a href="#inicio" class="text-white text-decoration-none d-block mb-1">Início</a></li>
+              <li><a href="#sobre" class="text-white text-decoration-none d-block mb-1">Sobre</a></li>
+              <li><a href="#formacao" class="text-white text-decoration-none d-block mb-1">Formação de Líderes</a></li>
+              <li><a href="#produtos" class="text-white text-decoration-none d-block mb-1">Produtos</a></li>
+              <li><a href="#youtube" class="text-white text-decoration-none d-block mb-1">Youtube</a></li>
+              <li><a href="#artigos" class="text-white text-decoration-none d-block mb-1">Artigos</a></li>
+              <li><a href="#contato" class="text-white text-decoration-none d-block">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 text-center text-md-start">
+            <h5 class="text-uppercase fw-bold mb-3">Fale Conosco</h5>
+            <p class="small">Entre em contato direto conosco pelo WhatsApp:</p>
+            <a
+              href="https://api.whatsapp.com/send?phone=21966697276"
+              target="_blank"
+              class="btn btn-gold d-inline-flex align-items-center"
+              style="background-color: #c8a241; color: white;"
+            >
+              <i class="bi bi-whatsapp me-2"></i>
+              Fale pelo WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center mt-5 pt-4 border-top border-white border-opacity-10">
+          <small>Essenza Rafinnato © 2025 | Todos os direitos reservados</small>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="navbar.js"></script>
+    
+  </body>
+</html>

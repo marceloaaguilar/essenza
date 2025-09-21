@@ -31,7 +31,6 @@
         user-select: none;
       }
 
-      /* Cards container and layout */
       .card {
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -142,6 +141,20 @@
           margin-bottom: 15px;
         }
       }
+
+      .btn-produto {
+        background: #c8a241;
+        color: white;
+        font-weight: 500;
+        text-transform: uppercase;
+        border: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-produto:hover {
+        background-color: #c8a241;
+        color: white;
+      }
     </style>
   </head>
 
@@ -150,87 +163,186 @@
       <i class="bi bi-whatsapp"></i>
     </a>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="/images/logo.png" alt="Logo Instituto Essenza Rafinnato" style="height: 5rem" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
-          <ul class="navbar-nav text-center text-lg-start">
-            <li class="nav-item"><a class="nav-link" href="/#">Início</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#youtube">Youtube</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <custom-navbar></custom-navbar>
     
     <main class="container my-5">
-      <h1 class="titulo-cursivo">E-books</h1>
+      <section class="mb-5 text-center">
+        <h2 class="mb-3">Bem-vindo à Biblioteca Essenza Raffinatto</h2>
+        <h5 class="mb-3 text-muted">Um espaço de aprendizado e crescimento pessoal</h5>
+        <p class="mb-4">
+          O Instituto Essenza Raffinatto oferece uma seleção exclusiva de e-books sobre <strong>autoconhecimento, saúde mental, neurociência, espiritualidade</strong> e <strong>inteligência emocional</strong>. 
+          Descubra títulos cuidadosamente escolhidos para inspirar seu desenvolvimento interior e apoiar sua jornada de transformação pessoal.
+        </p>
+        <a href="#ebooks" class="btn btn-produto mt-auto">Acessar a Biblioteca</a>
+      </section>
 
-      <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <div class="card">
-            <img src="images/oPoderDaPostura.png" alt="O Poder da Postura" />
-            <div class="card-body">
-              <div class="card-title">O Poder da Postura</div>
-              <a href="https://pay.exemplo.com" class="btn-buy" target="_blank" rel="noopener noreferrer">Comprar</a>
+      <section id="ebooks" class="py-5" style="background-color: #f9f9f9;">
+        <div class="container">
+          <h1 class="titulo-cursivo mb-5 text-center">Nossos E-books</h1>
+
+          <div class="row g-4 justify-content-center">
+            <!-- O Poder da Postura -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="overflow-hidden">
+                  <img src="images/oPoderDaPostura.png" class="card-img-top img-fluid hover-zoom" alt="O Poder da Postura" />
+                </div>
+                <div class="card-body d-flex flex-column text-center">
+                  <h5 class="card-title fw-bold text-dark">O Poder da Postura</h5>
+                  <p class="fs-5 fw-bold mb-4" style="color: #c8a241;">R$ 24,90</p>
+                  <a href="https://pay.kiwify.com.br/YKXevyj" class="btn btn-produto mt-auto" target="_blank" rel="noopener noreferrer">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Liberte-se do Passado -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="overflow-hidden">
+                  <img src="images/liberteSeDoPassado.png" class="card-img-top img-fluid hover-zoom" alt="E-book Liberte-se do Passado" />
+                </div>
+                <div class="card-body d-flex flex-column text-center">
+                  <h5 class="card-title fw-bold text-dark">Liberte-se do Passado</h5>
+                  <p class="fs-5 fw-bold mb-4" style="color: #c8a241;">R$ 24,90</p>
+                  <a href="https://pay.kiwify.com.br/merh44x" class="btn btn-produto mt-auto" target="_blank" rel="noopener noreferrer">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Como Desbloquear a Sua Mente -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="overflow-hidden">
+                  <img src="images/comoDesbloquearASuaMente.jpg" class="card-img-top img-fluid hover-zoom" alt="E-book Como Desbloquear a Sua Mente" />
+                </div>
+                <div class="card-body d-flex flex-column text-center">
+                  <h5 class="card-title fw-bold text-dark">Como Desbloquear a Sua Mente</h5>
+                  <p class="fs-5 fw-bold mb-4" style="color: #c8a241;">R$ 24,90</p>
+                  <a href="https://pay.kiwify.com.br/OJpNXql" class="btn btn-produto mt-auto" target="_blank" rel="noopener noreferrer">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Aprenda o Poder de Dizer Não -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="overflow-hidden">
+                  <img src="images/aprendaOPoderDeDizerNao.jpg" class="card-img-top img-fluid hover-zoom" alt="E-book Aprenda o Poder de Dizer Não" />
+                </div>
+                <div class="card-body d-flex flex-column text-center">
+                  <h5 class="card-title fw-bold text-dark">Aprenda o Poder de Dizer Não</h5>
+                  <p class="fs-5 fw-bold mb-4" style="color: #c8a241;">R$ 24,90</p>
+                  <a href="https://pay.kiwify.com.br/3yYD24J" class="btn btn-produto mt-auto" target="_blank" rel="noopener noreferrer">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- A Arte de Voltar a Acreditar em Si Mesmo -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="overflow-hidden">
+                  <img src="images/AArteDeVoltarAAcreditarEmSiMesmo.png" class="card-img-top img-fluid hover-zoom" alt="E-book A Arte de Voltar a Acreditar em Si Mesmo" />
+                </div>
+                <div class="card-body d-flex flex-column text-center">
+                  <h5 class="card-title fw-bold text-dark">A Arte de Voltar a Acreditar em Si Mesmo</h5>
+                  <p class="fs-5 fw-bold mb-4" style="color: #c8a241;">R$ 24,90</p>
+                  <a href="https://pay.kiwify.com.br/hDAnOtv" class="btn btn-produto mt-auto" target="_blank" rel="noopener noreferrer">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pílulas de Autoestima -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="overflow-hidden">
+                  <img src="images/pilulasDeAutoestima.jpg" class="card-img-top img-fluid hover-zoom" alt="E-book Pílulas de Autoestima" />
+                </div>
+                <div class="card-body d-flex flex-column text-center">
+                  <h5 class="card-title fw-bold text-dark">Pílulas de Autoestima</h5>
+                  <p class="fs-5 fw-bold mb-4" style="color: #c8a241;">R$ 24,90</p>
+                  <a href="https://pay.kiwify.com.br/rfedNVT" class="btn btn-produto mt-auto" target="_blank" rel="noopener noreferrer">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quebra de Padrões -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="overflow-hidden">
+                  <img src="images/quebraDePadroes.jpeg" class="card-img-top img-fluid hover-zoom" alt="E-book Quebra de Padrões" />
+                </div>
+                <div class="card-body d-flex flex-column text-center">
+                  <h5 class="card-title fw-bold text-dark">Quebra de Padrões</h5>
+                  <p class="fs-5 fw-bold mb-4" style="color: #c8a241;">R$ 24,90</p>
+                  <a href="https://pay.kiwify.com.br/85h2EXZ" class="btn btn-produto mt-auto" target="_blank" rel="noopener noreferrer">Comprar</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="col-12 col-md-4">
-          <div class="card">
-            <img src="images/liberteSeDoPassado.png" alt="E-book Liberte-se do Passado" />
-            <div class="card-body">
-              <div class="card-title">Liberte-se do Passado</div>
-              <a href="https://pay.exemplo.com" class="btn-buy" target="_blank" rel="noopener noreferrer">Comprar</a>
+      <section id="ofertas" class="py-5">
+        <div class="container">
+          <h1 class="titulo-cursivo mb-4 text-center">Ofertas Especiais</h1>
+
+          <div class="row g-4 justify-content-center">
+
+            <!-- Oferta 1 - Trilogia -->
+            <div class="col-12 col-md-4">
+              <div class="card h-100 shadow-sm border-0 text-center">
+                <img src="images/ofertaTrilogia.png" class="card-img-top mx-auto mt-3" alt="Trilogia da Transformação Pessoal" style="width:128px; height:159px; object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title mb-3 fw-bold">Trilogia da Transformação Pessoal</h5>
+                  <p class="fs-5 fw-bold mb-4" style="color:#c8a241;">R$ 47,00</p>
+                  <a href="https://pay.kiwify.com.br/aypKXyG" 
+                    class="btn btn-produto mt-auto fw-bold"
+                    style="background:#c8a241; color:#fff; border:none; border-radius:0.5rem;" 
+                    target="_blank" rel="noopener noreferrer">
+                    Comprar Agora
+                  </a>
+                </div>
+              </div>
             </div>
+
+            <!-- Oferta - Completar Biblioteca -->
+            <div class="col-12 col-md-4">
+              <div class="card h-100 shadow-sm border-0 text-center">
+                <img src="images/ofertaCompletarBiblioteca.png" class="card-img-top mx-auto mt-3" alt="Completar Biblioteca (4 Livros)" style="width:128px; height:159px; object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title mb-3 fw-bold">Completar Biblioteca (4 Livros)</h5>
+                  <p class="fs-5 fw-bold mb-4" style="color:#c8a241;">R$ 49,90</p>
+                  <a href="https://pay.kiwify.com.br/E7jOiKf" 
+                    class="btn btn-produto mt-auto fw-bold"
+                    style="background:#c8a241; color:#fff; border:none; border-radius:0.5rem;" 
+                    target="_blank" rel="noopener noreferrer">
+                    Comprar Agora
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Oferta 2 - Biblioteca Completa -->
+            <div class="col-12 col-md-4">
+              <div class="card h-100 shadow-sm border-0 text-center">
+                <img src="images/ofertaBibliotecaCompleta.png" class="card-img-top mx-auto mt-3" alt="Biblioteca Completa Essenza Raffinato" style="width:128px; height:159px; object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title mb-3 fw-bold">Biblioteca Completa Essenza Raffinato</h5>
+                  <p class="fs-5 fw-bold mb-4" style="color:#c8a241;">R$ 97,00</p>
+                  <a href="https://pay.kiwify.com.br/h2ZUhJZ" 
+                    class="btn btn-produto mt-auto fw-bold"
+                    style="background:#c8a241; color:#fff; border:none; border-radius:0.5rem;" 
+                    target="_blank" rel="noopener noreferrer">
+                    Comprar Agora
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
+      </section>
 
-        <div class="col-12 col-md-4">
-          <div class="card">
-            <img
-              src="images/comoDesbloquearASuaMente.jpg"
-              alt="E-book Como Desbloquear a Sua Mente para Realizar Qualquer Sonho"
-            />
-            <div class="card-body">
-              <div class="card-title">Como Desbloquear a Sua Mente para Realizar Qualquer Sonho</div>
-              <a href="https://pay.exemplo.com" class="btn-buy" target="_blank" rel="noopener noreferrer">Comprar</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <div class="card">
-            <img src="images/aprendaOPoderDeDizerNao.jpg" alt="E-book Aprenda o Poder de Dizer Não" />
-            <div class="card-body">
-              <div class="card-title">Aprenda o Poder de Dizer Não</div>
-              <a href="https://pay.exemplo.com" class="btn-buy" target="_blank" rel="noopener noreferrer">Comprar</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <div class="card">
-            <img
-              src="images/AArteDeVoltarAAcreditarEmSiMesmo.png"
-              alt="E-book A Arte de Voltar a Acreditar em Si Mesmo "
-            />
-            <div class="card-body">
-              <div class="card-title">A Arte de Voltar a Acreditar em Si Mesmo</div>
-              <a href="https://pay.exemplo.com" class="btn-buy" target="_blank" rel="noopener noreferrer">Comprar</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </main>
 
     <footer class="text-white py-5 bg-dark">
@@ -243,7 +355,7 @@
               <a
                 href="https://www.instagram.com/inst.essenzaraffinato/"
                 target="_blank"
-                class="text-black"
+                class="text-white"
                 style="transition: color 0.3s"
               >
                 <i class="bi bi-instagram fs-5"></i>
@@ -251,7 +363,7 @@
               <a
                 href="https://www.youtube.com/@essenzainstituto"
                 target="_blank"
-                class="text-black"
+                class="text-white"
                 style="transition: color 0.3s"
               >
                 <i class="bi bi-youtube fs-5"></i>
@@ -259,7 +371,7 @@
               <a
                 href="https://www.tiktok.com/@inst.essenzaraffinato"
                 target="_blank"
-                class="text-black"
+                class="text-white"
                 style="transition: color 0.3s"
               >
                 <i class="bi bi-tiktok fs-5"></i>
@@ -269,13 +381,13 @@
 
           <div class="col-md-4 text-center text-md-start">
             <h5 class="text-uppercase fw-bold mb-3">Links Importantes</h5>
-            <ul class="list-unstyled small">
-              <li><a href="#inicio" class="text-black text-decoration-none d-block mb-1">Início</a></li>
-              <li><a href="#sobre" class="text-black text-decoration-none d-block mb-1">Sobre</a></li>
-              <li><a href="#produtos" class="text-black text-decoration-none d-block mb-1">Produtos</a></li>
-              <li><a href="#youtube" class="text-black text-decoration-none d-block mb-1">Youtube</a></li>
-              <li><a href="#artigos" class="text-black text-decoration-none d-block mb-1">Artigos</a></li>
-              <li><a href="#contato" class="text-black text-decoration-none d-block">Contato</a></li>
+            <ul class="list-unstyled small text">
+              <li><a href="#inicio" class="text-white text-decoration-none d-block mb-1">Início</a></li>
+              <li><a href="#sobre" class="text-white text-decoration-none d-block mb-1">Sobre</a></li>
+              <li><a href="#produtos" class="text-white text-decoration-none d-block mb-1">Produtos</a></li>
+              <li><a href="#youtube" class="text-white text-decoration-none d-block mb-1">Youtube</a></li>
+              <li><a href="#artigos" class="text-white text-decoration-none d-block mb-1">Artigos</a></li>
+              <li><a href="#contato" class="text-white text-decoration-none d-block">Contato</a></li>
             </ul>
           </div>
 
@@ -301,5 +413,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="navbar.js"></script>
+
   </body>
 </html>

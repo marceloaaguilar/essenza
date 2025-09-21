@@ -284,13 +284,11 @@
         -webkit-text-fill-color: transparent;
       }
 
-       @media (max-width: 767.98px) {
+      @media (max-width: 767.98px) {
         .slide-left-mobile {
           object-position: 25% center !important;
-      } 
-  }
-
-
+        }  
+      }
 
     </style>
   </head>
@@ -301,27 +299,7 @@
       <i class="bi bi-whatsapp"></i>
     </a>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="images/logo.png" alt="Logo Instituto Essenza Rafinnato" style="height: 5rem" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
-          <ul class="navbar-nav text-center text-lg-start">
-            <li class="nav-item"><a class="nav-link" href="/#">Início</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="#formacao">Formação de Líderes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#youtube">Youtube</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <custom-navbar></custom-navbar>
 
     <section id="inicio" class="position-relative text-white overflow-hidden">
       <div class="swiper hero-swiper">
@@ -536,7 +514,9 @@
               <i class="bi bi-file-earmark-text fs-1 mb-4 icone-gradiente"></i>
               <h2 class="fs-5 mb-3">Protocolos</h2>
               <p class="small text-muted mb-4">Modelos de atendimento e guias terapêuticos para aplicação prática.</p>
-              <a href="#" class="btn btn-sm btn-produto">Ver mais</a>
+              <a href="#"  class="btn btn-sm btn-produto" data-bs-toggle="modal" data-bs-target="#modalProtocolos">
+                Ver mais
+              </a>
             </div>
           </div>
 
@@ -556,7 +536,7 @@
               <i class="bi bi-people fs-1 mb-4 icone-gradiente"></i>
               <h2 class="fs-5 mb-3">Terapia em Grupo</h2>
               <p class="small text-muted mb-4">Experiências coletivas de escuta, acolhimento e transformação.</p>
-              <button data-bs-toggle="modal" data-bs-target="#terapiaModal" class="btn btn-sm btn-produto">Ver mais</button>
+              <button data-bs-toggle="modal" data-bs-target="#modalTerapiaEmGrupo" class="btn btn-sm btn-produto">Ver mais</button>
             </div>
           </div>
 
@@ -565,7 +545,7 @@
               <i class="bi bi-easel fs-1 mb-4 icone-gradiente"></i>
               <h2 class="fs-5 mb-3">Workshops</h2>
               <p class="small text-muted mb-4">Capacitações intensivas para ampliar suas habilidades.</p>
-              <button data-bs-toggle="modal" data-bs-target="#videoEmailModal" class="btn btn-sm btn-produto">Ver mais</button>
+              <button data-bs-toggle="modal" data-bs-target="#modalWorkshops" class="btn btn-sm btn-produto">Ver mais</button>
             </div>
           </div>
 
@@ -574,9 +554,32 @@
               <i class="bi bi-person-video3 fs-1 mb-4 icone-gradiente"></i>
               <h2 class="fs-5 mb-3">Cursos</h2>
               <p class="small text-muted mb-4">Desperte seu potencial com o método Essenza.</p>
-              <button data-bs-toggle="modal" data-bs-target="#cursoModal" class="btn btn-sm btn-produto">Ver mais</button>
+              <button data-bs-toggle="modal" data-bs-target="#modalCursos" class="btn btn-sm btn-produto">Ver mais</button>
             </div>
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-5" style="background-color: #4a4a4a;" id="video-section">
+      <div class="container text-center text-white">
+        <h2 class="mb-4 titulo-cursivo" style="font-size: 3.5rem; font-weight: 700;">
+          Conheça Mais
+        </h2>
+
+        <p class="lead mb-5" style="max-width: 700px; margin: 0 auto; font-size: 1.25rem; line-height: 1.7;">
+          <strong>Dra. Veridiana Bronzón</strong>, a maior prescritora de 
+          <span style="color: #c8a241;">canabidiol no Rio de Janeiro</span>, 
+          autorizada pela <strong>Anvisa</strong>.  
+          Referência nacional em tratamentos inovadores e seguros para a saúde.
+        </p>
+
+        <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden" style="max-width: 900px; margin: 0 auto;">
+          <video controls preload="metadata" style="width: 100%; height: 100%; object-fit: cover;">
+            <source src="videos/videoCanabidiol.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeo.
+          </video>
         </div>
 
       </div>
@@ -954,9 +957,182 @@
       </div>
     </div>
 
+    <!-- Modal Protocolos -->
+    <div class="modal fade" id="modalProtocolos" tabindex="-1" aria-labelledby="modalProtocolosLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalProtocolosLabel">Protocolos de Reprogramação Mental</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          
+          <div class="modal-body text-center">
+            <p class="mb-4">
+              Temos <strong>protocolos de reprogramação mental</strong> produzidos e catalogados pela nossa equipe, 
+              desenvolvidos para oferecer suporte prático e eficaz no seu processo de transformação.
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=21966697276" 
+              target="_blank" 
+              class="btn btn-produto px-4 py-2 fw-bold"
+              style="background: #c8a241; color: #fff; border: none; border-radius: 0.5rem;">
+              Marcar Consulta
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Terapia em Grupo -->
+    <div class="modal fade" id="modalTerapiaEmGrupo" tabindex="-1" aria-labelledby="modalTerapiaEmGrupoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTerapiaEmGrupoLabel">Terapia em Grupo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          
+          <div class="modal-body text-center">
+            <p class="mb-4">
+              A <strong>Dra. Veridiana Bronzón</strong> e a <strong>terapeuta Vanessa Dizul</strong> conduzem, semanalmente, 
+              um espaço de <strong>terapia em grupo acolhedor e transformador</strong>, onde é possível compartilhar vivências, 
+              desenvolver autoconhecimento e fortalecer vínculos.
+            </p>
+            <p class="mb-4">
+              A proposta é reunir pessoas que buscam apoio emocional e crescimento pessoal em um ambiente seguro, 
+              com <strong>escuta qualificada</strong> e <strong>direcionamento terapêutico</strong>.
+            </p>
+            <p class="mb-4 text-danger fw-bold">
+              As vagas são limitadas!
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=21966697276" 
+              target="_blank" 
+              class="btn btn-produto px-4 py-2 fw-bold"
+              style="background: #c8a241; color: #fff; border: none; border-radius: 0.5rem;">
+              Marcar Consulta
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Cursos -->
+    <div class="modal fade" id="modalCursos" tabindex="-1" aria-labelledby="modalCursosLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCursosLabel">Cursos de Capacitação</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+
+          <div class="modal-body">
+
+            <!-- Título e descrição -->
+            <div class="text-center mb-4">
+              <p>
+                A <strong>Dra. Veridiana Bronzón</strong> e a <strong>terapeuta Vanessa Dizul</strong> oferecem 
+                <strong>cursos de capacitação</strong> voltados para terapeutas e líderes que desejam aprofundar 
+                seus conhecimentos e práticas em saúde mental.
+              </p>
+              <p class="fw-bold text-danger">
+                Novas turmas serão abertas em breve!  
+                Preencha seus dados abaixo para ser avisado em primeira mão.
+              </p>
+            </div>
+
+            <!-- Formulário -->
+            <form id="formCursos">
+              <div class="row g-3">
+                <!-- Coluna 1 -->
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="nome" class="form-label">Nome completo</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                  </div>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem (opcional)</label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="3" placeholder="Deixe sua mensagem"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-3">
+                <button type="submit" 
+                  class="btn btn-produto px-4 py-2 fw-bold"
+                  style="background: #c8a241; color: #fff; border: none; border-radius: 0.5rem;">
+                  Quero ser avisado!
+                </button>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Workshops -->
+    <div class="modal fade" id="modalWorkshops" tabindex="-1" aria-labelledby="modalWorkshopsLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalWorkshopsLabel">Workshops & Vivências</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+
+          <div class="modal-body text-center">
+
+            <!-- Título e descrição -->
+            <p>
+              Além de oferecer workshops por meio do <strong>Instituto Essenza Raffinatto</strong>, 
+              a <strong>Dra. Veridiana Bronzón</strong> e a <strong>terapeuta Vanessa Dizul</strong> 
+              também podem ser convidadas para ministrar palestras e vivências no seu evento ou empresa.
+            </p>
+            <p>
+              Com uma abordagem acolhedora, científica e prática, elas conduzem encontros transformadores sobre 
+              <strong>saúde mental, inteligência emocional, autocuidado e relacionamentos</strong>, sempre adaptando 
+              o conteúdo ao perfil do público.
+            </p>
+            <p class="fw-bold text-danger">
+              Convide a equipe do Instituto Essenza Raffinatto e promova um momento de reflexão, conexão e cuidado!
+            </p>
+
+            <!-- Botão WhatsApp -->
+            <a href="https://api.whatsapp.com/send?phone=5521966697276" target="_blank" 
+              class="btn btn-produto px-5 py-3 fw-bold"
+              style="background:#c8a241; color:#fff; border:none; border-radius:0.5rem; font-size:1.1rem;">
+              Entrar em contato pelo WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="navbar.js"></script>
+    
   </body>
 </html>
