@@ -1,14 +1,19 @@
-// navbar.js
 class CustomNavbar extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
-
-    this.shadowRoot.innerHTML = `
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    this.innerHTML = `
       <style>
         .navbar-nav .nav-link {
           font-size: 0.9rem;
+        }
+
+        /* Logo menor em telas menores que 992px */
+        @media (max-width: 991.98px) {
+          .navbar-brand img {
+            max-height: 2.5rem; /* ajuste se quiser maior/menor */
+            height: auto;
+            width: auto;
+          }
         }
 
         @media (min-width: 992px) {
@@ -21,12 +26,19 @@ class CustomNavbar extends HTMLElement {
           }
         }
       </style>
+
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-2">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="images/logo.png" alt="Logo Instituto Essenza Rafinnato" />
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+          <button class="navbar-toggler" type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
